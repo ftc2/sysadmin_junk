@@ -1,0 +1,8 @@
+client_config_backend: settings
+client_config:
+   client_id: asdf
+   client_secret: asdf
+save_credentials: True
+save_credentials_backend: file
+save_credentials_file: /etc/duply/www/gdrive.cache
+get_refresh_token: True

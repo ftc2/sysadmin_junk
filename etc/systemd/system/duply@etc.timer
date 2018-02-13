@@ -1,0 +1,10 @@
+[Unit]
+Description=Run duply backups
+
+[Timer]
+OnCalendar=daily
+RandomizedDelaySec=3hr
+Persistent=true
+
+[Install]
+WantedBy=timers.target

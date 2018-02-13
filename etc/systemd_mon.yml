@@ -1,0 +1,15 @@
+verbose: true # Default is off
+notifiers:
+  slack:
+    webhook_url: https://hooks.slack.com/services/asdf
+    channel: server-status
+    username: SystemdMon
+    icon_emoji: "computer"
+units:
+- nginx.service
+# oneshot services don't work properly. grr
+#- certbot.service
+#- duply@etc.service
+#- duply@www.service
+#- pgsql-backup@incr.service
+#- pgsql-backup@full.service

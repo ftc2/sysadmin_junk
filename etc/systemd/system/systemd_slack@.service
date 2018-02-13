@@ -1,0 +1,6 @@
+[Unit]
+Description=Slack notifier for systemd service failure
+
+[Service]
+Type=OneShot
+ExecStart=/usr/local/bin/systemd_slack.sh %i

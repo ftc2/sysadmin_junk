@@ -1,0 +1,9 @@
+[Unit]
+Description=Duply backup service
+After=network-online.target
+Wants=network-online.target
+OnFailure=systemd_slack@%n.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/duply %i backup_purge_purgeIncr --force

@@ -1,0 +1,9 @@
+[Unit]
+Description=PostgreSQL backup service
+After=network-online.target
+Wants=network-online.target
+OnFailure=systemd_slack@%n.service
+
+[Service]
+Type=oneshot
+ExecStart=/etc/duply/pgsql/backup-%i.sh

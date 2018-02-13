@@ -1,0 +1,13 @@
+[Unit]
+Description=SystemdMon
+After=network.target
+
+[Service]
+Type=simple
+StandardInput=null
+StandardOutput=syslog
+StandardError=syslog
+ExecStart=/usr/local/bin/systemd_mon /etc/systemd_mon.yml
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+[Unit]
+Description=Run PostgreSQL backups
+
+[Timer]
+# trigger monthly (at 6am so it's not happening during a daily incr)
+OnCalendar=*-*-01 06:00:00
+RandomizedDelaySec=3hr
+Persistent=true
+
+[Install]
+WantedBy=timers.target

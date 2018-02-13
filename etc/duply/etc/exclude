@@ -1,0 +1,21 @@
+# although called exclude, this file is actually a globbing file list
+# duplicity accepts some globbing patterns, even including ones here
+# here is an example, this incl. only 'dir/bar' except it's subfolder 'foo'
+# - dir/bar/foo
+# + dir/bar
+# - **
+# for more details see duplicity manpage, section File Selection
+# http://duplicity.nongnu.org/duplicity.1.html#sect9
+
++ /etc/duply
++ /etc/nginx
++ /etc/pgbackrest.conf
++ /etc/postgresql
++ /etc/php
++ /etc/systemd/system
++ /etc/systemd_mon.yml
++ /usr/local/bin/systemd_slack.sh
++ /usr/local/bin/slacktee.sh
++ /etc/slacktee.conf
++ /etc/netdata/netdata.conf
+- **
