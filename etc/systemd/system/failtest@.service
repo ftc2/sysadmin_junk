@@ -6,4 +6,4 @@ OnFailure=systemd_slack@%n.service
 
 [Service]
 Type=oneshot
-ExecStart=/bin/ls -e
+ExecStart=/bin/ls --imaginary-argument-for-failure
